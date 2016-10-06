@@ -20,7 +20,6 @@ public class MusicActivity extends AppCompatActivity {
 
     private MediaPlayer ukuleleMP;
     private MediaPlayer ipuMP;
-    private MediaPlayer hulaMP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +64,12 @@ public class MusicActivity extends AppCompatActivity {
                     ukuleleButton.setText(R.string.ukulele_button_pause_text);
                     // Hide the other two buttons
                     ipuButton.setVisibility(View.INVISIBLE);
-                    ipuButton.setVisibility(View.INVISIBLE);
+                    hulaButton.setVisibility(View.INVISIBLE);
                 }
 
                 break;
             case R.id.ipuButton:
-                if (ukuleleMP.isPlaying())
+                if (ipuMP.isPlaying())
                 {
                     ipuMP.pause();
                     // Show the other two buttons (ipu and hula)
